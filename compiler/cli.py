@@ -141,6 +141,7 @@ def parse_stub(stub_filename):
         interpreter = '/usr/bin/env python2'
     elif '/' in interpreter:
         raise error.Error(
+            'Current interpreter %s.' % interpreter +
             'par files require a Python runtime that is ' +
             'installed on the system, not defined inside the workspace. Use ' +
             'a `py_runtime` with an absolute path, not a label.')
